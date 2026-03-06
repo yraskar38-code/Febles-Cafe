@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reserve – Fables Café</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="reserve.css" />
+</head>
+
+<body>
+
+  <!-- ── NAVIGATION ── -->
+  <nav class="nav" id="navbar">
+    <a href="index.html" class="nav-logo"><span>Fables</span></a>
+    <ul class="nav-links">
+      <li><a href="about.html">Our Story</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="contact.html">Visit</a></li>
+      <li><a href="reserve.html" class="nav-reserve active-reserve">Reserve</a></li>
+    </ul>
+    <button class="nav-hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ── PAGE HEADER ── -->
+  <header class="reserve-header">
+    <div class="reserve-header-inner">
+      <p class="page-header-eyebrow fade-up">Tables for Every Story</p>
+      <h1 class="page-header-title fade-up delay-1">Make a <em>Reservation</em></h1>
+      <p class="page-header-sub fade-up delay-2">Claim your chapter</p>
+      <p class="page-header-body fade-up delay-3">
+        We hold tables for those who plan ahead. Walk-ins are welcome when space allows, but reservations ensure you'll
+        always have a seat in your favourite corner.
+      </p>
+    </div>
+    <div class="header-books">
+      <div class="hb-book" style="background:#2c1810; transform: rotate(-8deg) translateY(10px);">Myths</div>
+      <div class="hb-book" style="background:#8b7a2a; transform: rotate(-3deg) translateY(5px);">Fables</div>
+      <div class="hb-book" style="background:#2d5a4f; transform: rotate(2deg);">Tales</div>
+      <div class="hb-book" style="background:#a63d2f; transform: rotate(6deg) translateY(5px);">Legends</div>
+    </div>
+  </header>
+
+  <!-- ── SPACE SELECTOR ── -->
+  <!-- ──<section class="space-selector-section section">
+    <div style="text-align: center; margin-bottom: 3rem;">
+      <span class="section-tag">Step 1</span>
+      <h2 class="section-title">Choose your <em>space</em></h2>
+    </div>
+    <div class="space-cards">
+
+      <div class="space-option" data-space="library" onclick="selectSpace(this, 'The Library Lounge')">
+        <div class="space-option-icon">📚</div>
+        <h3>The Library Lounge</h3>
+        <p>Velvet armchairs, shelves of books, warm lamp light. Best for solo visits or intimate gatherings.</p>
+        <div class="space-meta">
+          <span>Up to 4 guests</span>
+          <span>All day</span>
+        </div>
+        <div class="select-badge">Select</div>
+      </div>
+
+      <div class="space-option" data-space="garden" onclick="selectSpace(this, 'The Garden Room')">
+        <div class="space-option-icon">🌿</div>
+        <h3>The Garden Room</h3>
+        <p>Morning light, trailing ivy, birdsong. A glass-and-iron courtyard for groups and special occasions.</p>
+        <div class="space-meta">
+          <span>Up to 10 guests</span>
+          <span>8am – 6pm</span>
+        </div>
+        <div class="select-badge">Select</div>
+      </div>
+
+      <div class="space-option" data-space="den" onclick="selectSpace(this, 'The Writer\'s Den')">
+        <div class="space-option-icon">🪶</div>
+        <h3>The Writer's Den</h3>
+        <p>Private booths, hushed ambience, power sockets. For those who need to think without interruption.</p>
+        <div class="space-meta">
+          <span>Up to 2 guests</span>
+          <span>By reservation only</span>
+        </div>
+        <div class="select-badge">Select</div>
+      </div>
+
+      <div class="space-option" data-space="private" onclick="selectSpace(this, 'Private Hire')">
+        <div class="space-option-icon">🕯️</div>
+        <h3>Private Hire</h3>
+        <p>Exclusive use of the café for birthdays, launches, or intimate celebrations. Bespoke menus available.</p>
+        <div class="space-meta">
+          <span>Up to 40 guests</span>
+          <span>After hours available</span>
+        </div>
+        <div class="select-badge">Select</div>
+      </div>
+
+    </div>
+  </section>── -->
+
+  <!-- ── RESERVATION FORM ── -->
+  <section class="reservation-form-section">
+    <div class="reservation-form-inner">
+
+      <div class="form-sidebar">
+        <span class="section-tag" style="color: var(--gold-light);"></span>
+        <h2 class="section-title" style="color: var(--cream);">Your <em style="color:var(--gold-light)">details</em>
+        </h2>
+        <div class="sidebar-note">
+          <p>Reservations are held for 15 minutes. Please arrive on time or call ahead if you're running late.</p>
+        </div>
+        <div class="sidebar-info">
+          <div class="si-item">
+            <span class="si-label">Phone</span>
+            <span>+91 22 4000 1234</span>
+          </div>
+          <div class="si-item">
+            <span class="si-label">Email</span>
+            <span>reserve@fablescafe.in</span>
+          </div>
+          <div class="si-item">
+            <span class="si-label">Policy</span>
+            <span>Cancellations 2hrs before</span>
+          </div>
+        </div>
+        <div class="selected-space-display" id="selectedSpaceDisplay">
+          <span class="si-label">Selected space</span>
+          <strong id="selectedSpaceName">None selected yet</strong>
+        </div>
+      </div>
+
+      <div class="form-body">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" placeholder="Your first name">
+          </div>
+          <div class="form-group">
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" placeholder="Your last name">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="remail">Email Address</label>
+            <input type="email" id="remail" placeholder="your@email.com">
+          </div>
+          <div class="form-group">
+            <label for="rphone">Phone Number</label>
+            <input type="tel" id="rphone" placeholder="+91 00000 00000">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="rdate">Date</label>
+            <input type="date" id="rdate">
+          </div>
+          <div class="form-group">
+            <label for="rtime">Preferred Time</label>
+            <select id="rtime">
+              <option value="">Select a time...</option>
+              <option>7:00 am</option>
+              <option>8:00 am</option>
+              <option>9:00 am</option>
+              <option>10:00 am</option>
+              <option>11:00 am</option>
+              <option>12:00 pm</option>
+              <option>1:00 pm</option>
+              <option>2:00 pm</option>
+              <option>3:00 pm</option>
+              <option>4:00 pm</option>
+              <option>5:00 pm</option>
+              <option>6:00 pm</option>
+              <option>7:00 pm</option>
+              <option>8:00 pm</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="rguests">Number of Guests</label>
+            <select id="rguests">
+              <option>1 guest</option>
+              <option>2 guests</option>
+              <option>3 guests</option>
+              <option>4 guests</option>
+              <option>5 guests</option>
+              <option>6 guests</option>
+              <option>7-10 guests</option>
+              <option>11-20 guests</option>
+              <option>20+ guests</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="rspace-hidden">Space</label>
+            <input type="text" id="rspace-hidden" placeholder="Select from above" readonly
+              style="background: var(--cream-dark); cursor:default;" id="spaceInput">
+          </div>
+        </div>
+
+        <div class="form-group full">
+          <label for="rspecial">Special Requests or Occasion</label>
+          <textarea id="rspecial" rows="4"
+            placeholder="Dietary requirements, birthday, anniversary, private event details..."></textarea>
+        </div>
+
+        <div class="form-checkbox">
+          <input type="checkbox" id="rdiet">
+          <label for="rdiet">I have dietary requirements (we'll contact you before your visit)</label>
+        </div>
+
+        <div class="form-checkbox">
+          <input type="checkbox" id="rnewsletter">
+          <label for="rnewsletter">Add me to the Fables newsletter for events & seasonal menus</label>
+        </div>
+
+        <button class="reserve-submit-btn" onclick="handleReserve()">Confirm Reservation</button>
+
+        <div id="reserve-success" class="reserve-success" style="display:none;">
+          <div class="success-icon">✦</div>
+          <h3>Your table is reserved</h3>
+          <p>We've sent a confirmation to your email. We look forward to welcoming you to Fables.</p>
+          <p style="font-size: 0.85rem; margin-top: 0.5rem; opacity: 0.7;">If you need to make changes, call us at +91
+            22 4000 1234</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FAQ ── -->
+  <section class="faq-section section">
+    <div style="text-align:center; margin-bottom: 3rem;">
+      <span class="section-tag">Before You Visit</span>
+      <h2 class="section-title">Frequently asked <em>questions</em></h2>
+    </div>
+    <div class="faq-grid">
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Do you accept walk-ins?
+          <span class="faq-arrow">↓</span>
+        </button>
+        <div class="faq-a">
+          <p>Yes, always. We keep some tables for walk-in guests at all times. Weekends get busy, so a reservation is
+            wise if you have a specific time in mind.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Is there a minimum spend per person?
+          <span class="faq-arrow">↓</span>
+        </button>
+        <div class="faq-a">
+          <p>No minimum spend. We only ask that each guest orders at least one item from our menu. The Writer's Den
+            requires a 2-hour minimum booking.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Can I bring children?
+          <span class="faq-arrow">↓</span>
+        </button>
+        <div class="faq-a">
+          <p>Absolutely. We welcome families warmly. The Library Lounge and Garden Room are best for little ones. We
+            have a small children's menu available.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          How far in advance should I book?
+          <span class="faq-arrow">↓</span>
+        </button>
+        <div class="faq-a">
+          <p>For the Writer's Den, book at least 24 hours ahead. The Garden Room fills up on weekends — we recommend
+            48–72 hours. Private hire requires at least two weeks.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Do you cater for dietary requirements?
+          <span class="faq-arrow">↓</span>
+        </button>
+        <div class="faq-a">
+          <p>We have extensive vegan, vegetarian, and gluten-free options. Please mention any allergies in your
+            reservation notes — we'll always accommodate you thoughtfully.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Can I bring my own cake for a celebration?
+          <span class="faq-arrow">↓</span>
+        </button>
+        <div class="faq-a">
+          <p>Yes, with a ₹500 cake-cutting fee which goes toward serving equipment and clean-up. Let us know in advance
+            and we'll have everything ready.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <span class="logo">Fables</span>
+        <p>"Every cup tells a tale."</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="about.html">Our Story</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="contact.html">Visit Us</a></li>
+          <li><a href="reserve.html">Reserve</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Hours</h4>
+        <p>Monday – Friday<br>7:00 am – 9:00 pm</p>
+        <p style="margin-top:0.8rem;">Saturday – Sunday<br>8:00 am – 10:00 pm</p>
+      </div>
+      <div class="footer-col">
+        <h4>Find Us</h4>
+        <p>12 Storybook Lane<br>Bandra West<br>Mumbai, 400050</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Fables Café. All rights reserved.</p>
+      <p>Crafted with coffee & care.</p>
+    </div>
+  </footer>
+
+  <script>
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 40);
+    });
+
+    // Space selector
+    function selectSpace(el, name) {
+      document.querySelectorAll('.space-option').forEach(s => s.classList.remove('selected'));
+      el.classList.add('selected');
+      document.getElementById('selectedSpaceName').textContent = name;
+      document.getElementById('rspace-hidden').value = name;
+    }
+
+    // Reservation submit
+    function handleReserve() {
+      const fname = document.getElementById('fname').value;
+      const remail = document.getElementById('remail').value;
+      const rdate = document.getElementById('rdate').value;
+      if (!fname || !remail || !rdate) {
+        alert('Please fill in your name, email, and date to proceed.');
+        return;
+      }
+      document.getElementById('reserve-success').style.display = 'block';
+      document.querySelector('.reserve-submit-btn').style.display = 'none';
+      document.getElementById('reserve-success').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // FAQ toggle
+    function toggleFaq(btn) {
+      const item = btn.parentElement;
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    }
+
+    // Set min date to today
+    const today = new Date().toISOString().split('T')[0];
+    document.getElementById('rdate').min = today;
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Menu – Fables Café</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="menu.css" />
+</head>
+<body>
+
+  <!-- ── NAVIGATION ── -->
+  <nav class="nav" id="navbar">
+    <a href="index.html" class="nav-logo"><span>Fables</span></a>
+    <ul class="nav-links">
+      <li><a href="about.html">Our Story</a></li>
+      <li><a href="menu.html" class="active">Menu</a></li>
+      <li><a href="contact.html">Visit</a></li>
+      <li><a href="reserve.html" class="nav-reserve">Reserve</a></li>
+    </ul>
+    <button class="nav-hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ── PAGE HEADER ── -->
+  <header class="page-header">
+    <p class="page-header-eyebrow fade-up">Seasonal & Thoughtfully Sourced</p>
+    <h1 class="page-header-title fade-up delay-1">The <em>Menu</em></h1>
+    <p class="page-header-sub fade-up delay-2">A story told through flavour</p>
+    <p class="page-header-body fade-up delay-3">
+      Every item on our menu is chosen with the same care we give our bookshelves — only what earns its place.
+    </p>
+  </header>
+
+  <!-- ── MENU FILTERS ── -->
+  <div class="menu-filters">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="coffee">Coffee</button>
+    <button class="filter-btn" data-filter="teas">Teas & More</button>
+    <button class="filter-btn" data-filter="pastries">Pastries</button>
+    <button class="filter-btn" data-filter="mains">Mains</button>
+    <button class="filter-btn" data-filter="specials">Chef's Specials</button>
+  </div>
+
+  <!-- ── MENU CONTENT ── -->
+  <main class="menu-main">
+
+    <!-- COFFEE -->
+    <section class="menu-chapter" data-category="coffee">
+      <div class="chapter-header">
+        <div class="chapter-rule"></div>
+        <h2 class="chapter-title">☕ Coffee</h2>
+        <div class="chapter-rule"></div>
+      </div>
+      <p class="chapter-intro">Sourced from single-origin farms across India, Ethiopia, and Colombia. Roasted in-house, weekly.</p>
+      <div class="menu-grid">
+
+        <div class="menu-row">
+          <div class="menu-row-left">
+            <h3>Fables Classic Espresso</h3>
+            <p>Our signature blend: dark chocolate, dried cherry, cedar</p>
+            <span class="tags"><span class="tag">Signature</span></span>
+          </div>
+          <span class="price">₹220</span>
+        </div>
+
+        <div class="menu-row">
+          <div class="menu-row-left">
+            <h3>The Midnight Chapter</h3>
+            <p>Dark roast espresso, black sesame milk, cardamom, Himalayan salt</p>
+            <span class="tags"><span class="tag bestseller">Bestseller</span></span>
+          </div>
+          <span class="price">₹380</span>
+        </div>
+
+        <div class="menu-row">
+          <div class="menu-row-left">
+            <h3>Fables Flat White</h3>
+            <p>Double ristretto, velvety micro-foam oat milk, dusted nutmeg</p>
+          </div>
+          <span class="price">₹320</span>
+        </div>
+
+        <div class="menu-row">
+          <div class="menu-row-left">
+            <h3>Cold Brew Noir</h3>
+            <p>18-hour cold steep, served over rock ice with a citrus peel</p>
+            <span class="tags"><span class="tag">Seasonal</span></span>
+          </div>
+          <span class="price">₹350</span>
+        </div>
+
+        <div class="menu-row">
+          <div class="menu-row-left">
+            <h3>Araku Pour-Over</h3>
+            <p>Single-origin Araku Valley; floral, bergamot, white grape notes</p>
+          </div>
+          <span class="price">₹420</span>
+        </div>
+
+        <div class="menu-row">
+          <div class="menu-row-left">
+            <h3>Cortado</h3>
+            <p>Equal parts espresso and steamed milk. Simple, perfect.</p>
+          </div>
+          <span class="price">₹270</span>
+        </div>
+
+        <div class="menu-row">
+          <div class="menu-row-left">
+            <h3>Affogato</h3>
+            <p>A scoop of vanilla bean gelato drowned in hot espresso</p>
+            <span class="tags"><span class="tag">Must Try</span></span>
+          </div>
+          <span class="price">₹340</span>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- TEAS -->
+    <section class="menu-chapter" data-category="teas">
+      <div class="chapter-header">
+        <div class="chapter-rule"></div>
+        <h2 class="chapter-title">🍵 Teas & Alternatives</h2>
+        <div class="chapter-rule"></div>
+      </div>
+      <p class="chapter-intro">Sourced from Darjeeling and Nilgiris. Caffeine-free options always available.</p>
+      <div class="menu-grid">
+
+        <div class="menu-row">
+          <div class="menu-row-left">
+            <h3>First Flush Darjeeling</h3>
+            <p>Light, floral, apricot-toned. Served with brown sugar crystal</p>
+            <span class="tags"><span class="tag">Seasonal</span></span>
+          </div>
+          <span class="price">₹280</span>
+        </div>
+
+        <div class="menu-row">
+          <div class="menu-row-left">
+            <h3>The Library Masala Chai</h3>
+            <p>Our house recipe, slow-simmered with seven spices. No shortcuts.</p>
+            <span class="tags"><span class="tag bestseller">Bestseller</span></span>
+          </div>
+          <span class="price">₹180</span>
+        </div>
+
+        <div class="menu-row">
+          <div class="menu-row-left">
+            <h3>Hibiscus & Rose Bloom</h3>
+            <p>Chilled hibiscus, rose water, honey, a sliver of mint</p>
+            <span class="tags"><span class="tag vegan">Vegan</span></span>
+          </div>
+          <span class="price">₹240</span>
+        </div>
+
+        <div class="menu-row">
+          <div class="menu-row-left">
+            <h3>Turmeric Tonic</h3>
+            <p>Golden milk with oat milk, black pepper, ginger, raw honey</p>
+            <span class="tags"><span class="tag vegan">Vegan</span><span class="tag">Caffeine Free</span></span>
+          </div>
+          <span class="price">₹260</span>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PASTRIES -->
+    <section class="menu-chapter" data-category="pastries">
+      <div class="chapter-header">
+        <div class="chapter-rule"></div>
+        <h2 class="chapter-title">🥐 Pastries & Bakes</h2>
+        <div class="chapter-rule"></div>
+      </div>
+      <p class="chapter-intro">All pastries baked fresh each morning from scratch. Sold until we run out.</p>
+      <div class="menu-grid">
+
+        <div class="menu-row">
+          <div class="menu-row-left">
+            <h3>Golden Era Croissant</h3>
+            <p>Laminated butter pastry, honey glaze, house-cultured cream</p>
+            <span class="tags"><span class="tag bestseller">Bestseller</span></span>
+          </div>
+          <span class="price">₹280</span>
+        </div>
+
+        <div class="menu-row">
+          <div class="menu-row-left">
+            <h3>Dark Chocolate & Sea Salt Tart</h3>
+            <p>Valrhona ganache, shortcrust shell, Maldon salt flakes</p>
+          </div>
+          <span class="price">₹320</span>
+        </div>
+
+        <div class="menu-row">
+          <div class="menu-row-left">
+            <h3>Cardamom Morning Bun</h3>
+            <p>Soft-rolled, pearl sugar, scented with green cardamom and orange zest</p>
+            <span class="tags"><span class="tag">House Favourite</span></span>
+          </div>
+          <span class="price">₹220</span>
+        </div>
+
+        <div class="menu-row">
+          <div class="menu-row-left">
+            <h3>Almond & Fig Bostock</h3>
+            <p>Day-old brioche, frangipane, roasted figs, flaked almonds</p>
+          </div>
+          <span class="price">₹290</span>
+        </div>
+
+        <div class="menu-row">
+          <div class="menu-row-left">
+            <h3>Seasonal Fruit Galette</h3>
+            <p>Rotating with the season. Ask your barista for today's version.</p>
+            <span class="tags"><span class="tag">Ask Us</span></span>
+          </div>
+          <span class="price">₹260</span>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- MAINS -->
+    <section class="menu-chapter" data-category="mains">
+      <div class="chapter-header">
+        <div class="chapter-rule"></div>
+        <h2 class="chapter-title">🍳 Mains</h2>
+        <div class="chapter-rule"></div>
+      </div>
+      <p class="chapter-intro">Served from 8 am to 4 pm. Simple, honest plates for a long, slow morning.</p>
+      <div class="menu-grid">
+
+        <div class="menu-row">
+          <div class="menu-row-left">
+            <h3>The Fables Breakfast Plate</h3>
+            <p>Two soft-boiled eggs, sourdough toast, roasted tomato, seasonal greens, herb butter</p>
+            <span class="tags"><span class="tag bestseller">Bestseller</span></span>
+          </div>
+          <span class="price">₹480</span>
+        </div>
+
+        <div class="menu-row">
+          <div class="menu-row-left">
+            <h3>Avocado on Rye</h3>
+            <p>House-made rye loaf, smashed avocado, chilli flakes, lemon, radish</p>
+            <span class="tags"><span class="tag vegan">Vegan</span></span>
+          </div>
+          <span class="price">₹420</span>
+        </div>
+
+        <div class="menu-row">
+          <div class="menu-row-left">
+            <h3>Ricotta Pancakes</h3>
+            <p>Light and cloud-like, served with burnt honey butter, fresh berries</p>
+          </div>
+          <span class="price">₹440</span>
+        </div>
+
+        <div class="menu-row">
+          <div class="menu-row-left">
+            <h3>Seasonal Soup & Bread</h3>
+            <p>A rotating slow-cooked soup. Today's menu on the blackboard.</p>
+            <span class="tags"><span class="tag">Ask Us</span><span class="tag vegan">Can be Vegan</span></span>
+          </div>
+          <span class="price">₹360</span>
+        </div>
+
+        <div class="menu-row">
+          <div class="menu-row-left">
+            <h3>Grilled Halloumi Sandwich</h3>
+            <p>Sourdough, charred halloumi, roasted pepper chutney, rocket</p>
+          </div>
+          <span class="price">₹460</span>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CHEF SPECIALS -->
+    <section class="menu-chapter specials-chapter" data-category="specials">
+      <div class="chapter-header">
+        <div class="chapter-rule gold"></div>
+        <h2 class="chapter-title gold">✦ Chef's Specials</h2>
+        <div class="chapter-rule gold"></div>
+      </div>
+      <p class="chapter-intro">Limited quantities daily. Our head chef's personal favourites, rotating weekly.</p>
+      <div class="specials-grid">
+
+        <div class="special-card">
+          <div class="special-badge">This Week</div>
+          <h3>Saffron & White Chocolate Éclair</h3>
+          <p>Choux pastry, saffron pastry cream, white chocolate glaze, edible gold dust</p>
+          <span class="price">₹380</span>
+        </div>
+
+        <div class="special-card featured">
+          <div class="special-badge gold-badge">Chef's Pick</div>
+          <h3>The Narrator's Brunch Board</h3>
+          <p>A curated board for two: housemade granola, labneh, seasonal preserves, sourdough, soft eggs, fruit</p>
+          <span class="price">₹960 <small>for two</small></span>
+        </div>
+
+        <div class="special-card">
+          <div class="special-badge">Weekend Only</div>
+          <h3>Miso Caramel Lava Cake</h3>
+          <p>Warm chocolate cake, white miso caramel molten centre, served with crème fraîche</p>
+          <span class="price">₹420</span>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ── DIETARY NOTE ── -->
+  <div class="dietary-note">
+    <p>🌿 <strong>Vegan</strong> &nbsp;|&nbsp; 🌾 Gluten-free options available on request &nbsp;|&nbsp; Please inform us of any allergies.</p>
+  </div>
+
+  <!-- ── FOOTER ── -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <span class="logo">Fables</span>
+        <p>"Every cup tells a tale."</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="about.html">Our Story</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="contact.html">Visit Us</a></li>
+          <li><a href="reserve.html">Reserve</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Hours</h4>
+        <p>Monday – Friday<br>7:00 am – 9:00 pm</p>
+        <p style="margin-top:0.8rem;">Saturday – Sunday<br>8:00 am – 10:00 pm</p>
+      </div>
+      <div class="footer-col">
+        <h4>Find Us</h4>
+        <p>12 Storybook Lane<br>Bandra West<br>Mumbai, 400050</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Fables Café. All rights reserved.</p>
+      <p>Crafted with coffee & care.</p>
+    </div>
+  </footer>
+
+  <script>
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 40);
+    });
+
+    // Menu filter
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const chapters = document.querySelectorAll('.menu-chapter');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filter = btn.dataset.filter;
+        chapters.forEach(ch => {
+          if (filter === 'all' || ch.dataset.category === filter) {
+            ch.style.display = 'block';
+            ch.style.animation = 'fadeUp 0.4s ease forwards';
+          } else {
+            ch.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
